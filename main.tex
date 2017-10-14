@@ -13,7 +13,13 @@
 \usepackage{color,graphicx}
 \newtheorem{proof}{Proof}
 \usepackage{hyperref} % for better viewing experience  -- added by alan
-\usepackage[margin=25mm,textheight=247mm,textwidth=145mm]{geometry}
+\usepackage[a4paper,total={170mm,257mm},left=20mm,top=20mm]{geometry}
+% \geometry{
+% a4paper,
+% total={170mm,257mm},
+% left=20mm,
+% top=20mm,
+% }
 
 % Alan: begin the font trial
 % Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
@@ -133,6 +139,7 @@
 %                                                                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% \makeabstract
 \input{chapter/sec-abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -158,6 +165,8 @@
 
 
 \input{chapter/sec-introduction}
+\input{chapter/sec-explainableclassifier}
+\input{chapter/sec-visualization}
 \input{chapter/sec-conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -186,7 +195,7 @@
 %                                                                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\bibliographystyle{plain}
+\bibliographystyle{IEEETranS}
 
 \bibliography{ref}
 % Please run "bibtex ustthesis_test" before the bibliography can be

@@ -713,30 +713,30 @@ scholarly research.}
 %	Add certain vertical space before the title.
     \TOffset
     \begin{center}
-%       {\Lbi \uppercase\expandafter{\@title} \par}
-%       \vglue 4ex
-% % Chan:
-% %	Make changes according to the guidelines released on March 2001.
-% %      {\lbi BY \par}
-% %      \vglue 4ex
-%       {\lbi by \par}
-%       \vglue 2ex
-%       {\lbi \uppercase\expandafter{\@author} \par}
-%       \vglue 4ex
-% %% Chan:
-% %%	Make changes according to the guidelines released on March 2001.
-% %      {\normalsize A Thesis Presented to \par}
-% %      {\normalsize The Hong Kong University of Science and Technology \par}
-% %      {\normalsize  in Partial Fulfillment \par}
-% %      {\normalsize of the Requirements for \par}
-% %      {\normalsize the Degree of \@degree\par}
-% %      \vglue 4ex
-% %      {\normalsize Hong Kong, \space\mon\space\number\year\par}
-% %      \vglue 10ex
-%       {\normalsize Department of \@department\par}
-%       \vglue 2ex
-%       {\normalsize The Hong Kong University of Science and Technology \par}
-%       \vglue 10ex
+      {\Lbi \uppercase\expandafter{\@title} \par}
+      \vglue 4ex
+% Chan:
+%	Make changes according to the guidelines released on March 2001.
+%      {\lbi BY \par}
+%      \vglue 4ex
+      {\lbi by \par}
+      \vglue 2ex
+      {\lbi \uppercase\expandafter{\@author} \par}
+      \vglue 4ex
+%% Chan:
+%%	Make changes according to the guidelines released on March 2001.
+%      {\normalsize A Thesis Presented to \par}
+%      {\normalsize The Hong Kong University of Science and Technology \par}
+%      {\normalsize  in Partial Fulfillment \par}
+%      {\normalsize of the Requirements for \par}
+%      {\normalsize the Degree of \@degree\par}
+%      \vglue 4ex
+%      {\normalsize Hong Kong, \space\mon\space\number\year\par}
+%      \vglue 10ex
+      {\normalsize Department of \@department\par}
+      \vglue 2ex
+      {\normalsize The Hong Kong University of Science and Technology \par}
+      \vglue 10ex
       {\Lbi ABSTRACT \par\par\normalsize}
     \end{center}
     % Chan:
@@ -1311,11 +1311,11 @@ scholarly research.}
 \def\thebibliography#1{
 % Chan:
 %	Output "References" (for consistence).
-  \typeout{References}
-  \chapter*{References\markboth{REFERENCES}{REFERENCES}}
+  % \typeout{References}
+  \chapter*{Bibliography\markboth{BIBLIOGRAPHY}{BIBLIOGRAPHY}}
   \list{[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
     \advance\leftmargin\labelsep\usecounter{enumi}}
-  \addcontentsline{toc}{chapter}{References}
+  \addcontentsline{toc}{chapter}{Bibliography}
   \def\newblock{\hskip .11em plus .33em minus -.07em}
   \sloppy
   \sfcode`\.=1000\relax
@@ -1886,7 +1886,7 @@ scholarly research.}
 %     \typeout{Signature Page}
 %     \textspaceundo
 %     \newpage
-%   \end{titlepage}
+  \end{titlepage}
 
 %
 % End of TitlePage
