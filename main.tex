@@ -11,15 +11,16 @@
 \usepackage[noend]{algorithmic}
 \usepackage[center]{subfigure}
 \usepackage{color,graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg} % for pdflatex we expect .pdf, .png, or .jpg files
+\graphicspath{{figures/}{pictures/}{images/}{./}} % where to search for the images
+
 \newtheorem{proof}{Proof}
 \usepackage{hyperref} % for better viewing experience  -- added by alan
+\renewcommand{\chapterautorefname}{Chapter}
+\renewcommand{\sectionautorefname}{Section}
 \usepackage[a4paper,total={170mm,257mm},left=20mm,top=20mm]{geometry}
-% \geometry{
-% a4paper,
-% total={170mm,257mm},
-% left=20mm,
-% top=20mm,
-% }
+
+%% it is recomended to use ``\autoref{sec:bla}'' instead of ``Fig.~\ref{sec:bla}''
 
 % Alan: begin the font trial
 % Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
@@ -35,6 +36,10 @@
 
 \newcommand{\red}[1]{#1}
 \newcommand{\tab}[1]{\hspace{3mm}}
+
+\newcommand{\etal}{\textit{et al}.}
+\newcommand{\ie}{\textit{i}.\textit{e}.}
+\newcommand{\eg}{\textit{e}.\textit{g}.}
 
 % \usepackage{latexsym}
     % Use the "latexsym" package when encountering the following error:
