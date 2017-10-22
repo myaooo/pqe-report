@@ -1,0 +1,49 @@
+\chapter{Concepts and Definitions}\label{sec-comcepts}
+
+In this section, we first briefly introduce the problem of classification, as an instance of supervised learning, and a few popular classifications models (classifiers). To clarify the scope of this survey, we discuss the concepts of explainability of classifiers and illustrate in which circumstances explainability are desirable or needed. 
+
+% \section{Concepts and Definitions}
+
+% To clarify the scope of this survey, we first briefly introduce the problem of classification, as an instance of supervised learning, and a few popular classifications models (classifiers). 
+
+%% Briefly Introduce classification
+
+\section{Classification} \label{sec:classifier-classification}
+
+Given an input space $\mathcal{X}$ and an output space $\mathcal{Y}=\{1, 2, ..., K\}$ with $K$ classes, \textbf{classification} is the problem of identifying any \textbf{observation} $\mathbf{x}\in\mathcal{X}$ to a class $y\in\mathcal{Y}$. For multi-label classification, where class labels are not exclusive, we can view it as multiple related binary classification. For simplicity, we only consider the basic formulation in this survey. 
+
+A \textbf{classifier} is an algorithm $f$ that implements classification, \ie, $y = f(\mathbf{x})$. To handle ambiguity, a classifier is often used in a probabilistic setting. That is, the output of $f$ a probabilistic distribution $p(y\mid \mathbf{x}, \mathcal{D})$ over all possible classes in $\mathcal{Y}$. $\mathcal{D}$ is the training set, which is a subset of $\mathcal{X}\times\mathcal{Y}$, that have already been observed. Thus, in practice, a classifier will often take the form of $\mathbf{y} = f(\mathbf{x})$, where $\mathbf{y}=(y_i)\in\mathbb{R}^K$ is a vector denoting the probabilistic distribution. Then the final classification will be the class $i$ with largest probability $\arg\max_{i}{y_i}$.
+
+% The \textbf{learning} or training of a classifier is the process of determining the best $f\in\mathbf{F}$ based on a given training set $\mathbf{D}$ that minimizes our cost of error, or, \textbf{loss function}. 
+
+\section{Classifiers}
+
+Classification is now widely applied in solving many real world applications. A few examples are: face recognition [], handwritten recognition [], sentiment analysis [] and spam filtering. 
+Here we briefly present a few popular models for classifications, including $k$-nearest neighbors, support vector machines, decision trees and neural networks.
+
+\textbf{$K$-nearest neighbor}.
+
+\textbf{Support vector machine}.
+
+\textbf{Decision trees}.
+
+\textbf{Neural networks}. CNN, RNN.
+
+\section{Explainability}
+
+What is explainability? What is the explainability of a classifier? There is no commonly agreed definitions so far. Doshi-Velez and Kim defines interpretability (or explainability) as the ability to explain or to present in understandable terms to a human \cite{doshi-velez2017interpretableml}, which is already a good general definition. To clarify the scope of this survey, we define the \textbf{explainability} of a classifier as the ability to explain the reasoning of its predictions so that a human can understand. Simple models such as a linear classifier already has good explainability since humans can easily understand the model's reasoning by simply looking at the coefficients of each feature. For a complicated classifier like a deep neural network, a human may find it difficult to understand due to layer-wise structure and the nonlinearity of the computation. Thus, the key of explainability is the humans.
+
+An immediate question is: why do we need explainability? 
+%Aren't existing complex and high-performing classifiers good enough? 
+The need of explainability for a full automated classifier mainly comes from three aspects: humans' curiosity about knowledge, limitations of current intelligent algorithms, and moral and legal issues:
+
+\begin{itemize}
+  \item \textbf{Curiosity of human}. Humans are curious about new knowledge. % in the data, and the knowledge learned by the model. 
+  Often, a classifier is not developed solely for performing the classification tasks, but also for knowledge discovery. For todays popular neural networks, humans are curious of how the impressive human-level classification accuracy is achieved. There are also examples of how insights learned from the behavior of a model lead to improvement on the design of a classifier \cite{zeiler2014eccv, alsallakh2017cnn-hierarchy}. Besides, given that AlphaGo Zero \cite{silver2017mastering} can learn to master the game of Go much better than human players, it is desirable that the machine can explain its learned strategy (knowledge) to us.
+  \item \textbf{Limitations of machines}. The current state-of-the-art intelligent systems are usually not fully testable. Human knowledge are required as a complement in case the machines fail. In the seeable future, machines are expected to assist rather than replace humans in many domains, such as security, medical services, education and design. By providing explainability, users' trust can be more easily established. Besides, explainability can provide an interface for humans to monitor machine.
+  \item \textbf{Moral and legal issues}. The ``right to explanation'', which is a regulation included in the GDPR \footnote{\url{https://www.privacy-regulation.eu/en/r71.htm}} of the European Union, has recently raised a debate on to which extent we should require automatic decision-making systems to provide explanations to the subjects of the decision. If one's application for a loan is denied by a automatic classifier, he/she has the right to ask why. A doctor may need to know why a patient is classified to have a lung cancer to give the final diagnosis. Another issue is the fairness or the discrimination problem of a classifier, which may be easily neglected during the development phase.
+\end{itemize}
+
+Though explainability is a desirable property, it should be noted that it is not always necessary. Explainability is not required if 1) the application domain has high resistance to errors, and thus, unexpected errors is acceptable; 2) the application domain has been well studied and the classifier has been well tested in production, and thus, it is unlikely to have unexpected results.
+
+\newpage

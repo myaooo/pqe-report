@@ -18,6 +18,9 @@
 \usepackage{hyperref} % for better viewing experience  -- added by alan
 \renewcommand{\chapterautorefname}{Chapter}
 \renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\tableautorefname}{Table}
+
 \usepackage[a4paper,total={170mm,257mm},left=20mm,top=20mm]{geometry}
 
 %% it is recomended to use ``\autoref{sec:bla}'' instead of ``Fig.~\ref{sec:bla}''
@@ -33,11 +36,12 @@
 \normalfont
 \usepackage[T1]{fontenc}
 % Alan: end the font trial
+\usepackage{multirow}
 
 \newcommand{\red}[1]{#1}
 \newcommand{\tab}[1]{\hspace{3mm}}
 
-\newcommand{\etal}{\textit{et al}.}
+\newcommand{\etal}{\textit{et al}. }
 \newcommand{\ie}{\textit{i}.\textit{e}.}
 \newcommand{\eg}{\textit{e}.\textit{g}.}
 
@@ -170,6 +174,7 @@
 
 
 \input{chapter/sec-introduction}
+\input{chapter/sec-concepts}
 \input{chapter/sec-explainableclassifier}
 \input{chapter/sec-visualization}
 \input{chapter/sec-conclusion}
