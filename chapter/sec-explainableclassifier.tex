@@ -50,6 +50,8 @@ In this section, we discuss methods that provide explainability to classifiers. 
 %To achieve explainability, existing work mainly falls into two categories. 
 The first type of work develops more interpretable classifiers that are easy to understand for humans. The second generates explanations for a classifier without modifying the model, either by explaining the classifier locally on specific instances, or by explaining the behavior of the classifier globally. A summary is shown in \autoref{tab:explainable-methods}.
 
+\renewcommand{\arraystretch}{1.3}
+
 \begin{table}[hb]
   \centering
 \begin{tabular}{ |c|c|c|p{15em}|p{7.5em}| } 
@@ -73,12 +75,12 @@ The first type of work develops more interpretable classifiers that are easy to 
   & \multicolumn{2}{|c|}{} & Sparsity by Bayesian \cite{tipping2001sparse}, & \multirow{2}*{direct-sparsity} \\
   & \multicolumn{2}{|c|}{} & Integer Models \cite{tan2010sparsesvm,ustun2016supersparse} & \\
   \hline
-  \multirow{14}{6em}{\centering Explanations of Classifiers} & \multirow{9}{3em}{\centering Local} & \multirow{4}{4em}{\centering Model-unaware}
+  \multirow{14}{6em}{\centering Explanations of Classifiers} & \multirow{9}{3em}{\centering Local} & \multirow{3}{4em}{\centering Model-unaware}
   & Sensitivity Analysis \cite{simonyan14saliency,li2016naccl-hlt,smilkov2017smoothgrad} & gradient-based \\ 
   \cline{4-5}
   & & & LIME \cite{ribeiro2016kdd} & model induction \\ 
   \cline{4-5}
-  & & & Generate Visual Explanations \cite{hendricks16generate} & extra label \\ 
+  & & & Generate Visual Explanations \cite{hendricks16generate} & extra labels \\ 
   \cline{3-5}
   & & \multirow{5}{4em}{\centering Model-aware}
   & De-convolution \cite{zeiler2014eccv}, & CNN \\
@@ -87,11 +89,13 @@ The first type of work develops more interpretable classifiers that are easy to 
   & & & Output Decomposition \cite{murdoch2017rule}, & LSTM \\
   & & & Direct Mapping \cite{karpathy16rnn} & RNN \\
   \cline{2-5}
-  & \multirow{4}{3em}{\centering Global} & \multirow{4}{4em}{\centering Model-unaware}
-  & cell3 & cell3  \\ 
-  & & & cell5 & cell6  \\ 
-  & & & cell8 & cell9 \\
-  & & & cell8 & cell9 \\ 
+  & \multirow{4}{3em}{\centering Global} & \multirow{1}{4em}{\centering Unaware}
+  & LIME \cite{ribeiro2016kdd} & model induction  \\ 
+  \cline{3-5}
+  & & \multirow{3}{4em}{\centering Model-aware}
+  & Partition Hidden Space \cite{feraud2002nn,rauber2017hidden-activity}, & NN \\
+  & & & Activation maximization \cite{erhan2009techreport}, & CNN \\
+  & & & Network Dissection \cite{bau2017netdissect} & CNN \\
   \hline
 \end{tabular}
 \caption{Towards explainable classifiers.}
