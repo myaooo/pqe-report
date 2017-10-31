@@ -90,11 +90,11 @@ The first type of work develops more interpretable classifiers that are easy to 
   & & & Direct Mapping \cite{karpathy16rnn} & RNN \\
   \cline{2-5}
   & \multirow{4}{3em}{\centering Global} & \multirow{1}{4em}{\centering Unaware}
-  & LIME \cite{ribeiro2016kdd} & model induction  \\ 
+  & Greedy-pick \cite{ribeiro2016kdd}, Top-k \cite{zeiler2014eccv} & sampling  \\ 
   \cline{3-5}
   & & \multirow{3}{4em}{\centering Model-aware}
   & Partition Hidden Space \cite{feraud2002nn,rauber2017hidden-activity}, & NN \\
-  & & & Activation maximization \cite{erhan2009techreport}, & CNN \\
+  & & & Activation maximization \cite{erhan2009techreport, simonyan14saliency}, & CNN \\
   & & & Network Dissection \cite{bau2017netdissect} & CNN \\
   \hline
 \end{tabular}
