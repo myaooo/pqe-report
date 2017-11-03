@@ -1,4 +1,4 @@
-# My PQE Report Repository
-==================
+# A survey on Visualization for Explainable Classifiers
 
-Modified from the template at https://github.com/Cheedoong/hkust-latex-thesis
+Latex templates modified from https://github.com/Cheedoong/hkust-latex-thesis
+
